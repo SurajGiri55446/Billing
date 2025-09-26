@@ -1,0 +1,583 @@
+/* Template4Style.css - Vintage Invoice Design */
+.vintage-invoice {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  max-width: 210mm;
+  min-height: 297mm;
+  margin: 0 auto;
+  padding: 30px;
+  background: #fdf6e3;
+  color: #5d4037;
+  line-height: 1.4;
+  position: relative;
+  border: 2px solid #8d6e63;
+  box-shadow: 0 0 25px rgba(141, 110, 99, 0.4);
+  background-image: 
+    linear-gradient(90deg, transparent 79px, #ab47bc 79px, #ab47bc 81px, transparent 81px),
+    linear-gradient(#fdf6e3 1px, transparent 1px);
+  background-size: 100% 24px;
+}
+
+/* Decorative Corners */
+.vintage-corner {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: 3px solid #7b1fa2;
+}
+
+.vintage-corner-tl {
+  top: 0;
+  left: 0;
+  border-right: none;
+  border-bottom: none;
+}
+
+.vintage-corner-tr {
+  top: 0;
+  right: 0;
+  border-left: none;
+  border-bottom: none;
+}
+
+.vintage-corner-bl {
+  bottom: 0;
+  left: 0;
+  border-right: none;
+  border-top: none;
+}
+
+.vintage-corner-br {
+  bottom: 0;
+  right: 0;
+  border-left: none;
+  border-top: none;
+}
+
+/* Header Section */
+.vintage-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 3px double #7b1fa2;
+}
+
+.vintage-company-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  flex: 2;
+}
+
+.vintage-logo-section {
+  flex-shrink: 0;
+}
+
+.vintage-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border: 3px solid #7b1fa2;
+  padding: 8px;
+  background: white;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.vintage-logo-fallback {
+  width: 100px;
+  height: 100px;
+  border: 3px dashed #7b1fa2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, #e1bee7, #f3e5f5);
+  border-radius: 5px;
+}
+
+.vintage-logo-fallback span {
+  font-size: 42px;
+  font-weight: bold;
+  color: #7b1fa2;
+}
+
+.vintage-company-details {
+  flex: 1;
+}
+
+.vintage-company-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0 0 8px 0;
+  color: #7b1fa2;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.vintage-company-tagline {
+  font-size: 14px;
+  font-style: italic;
+  margin: 0 0 12px 0;
+  color: #ab47bc;
+  border-bottom: 1px solid #ce93d8;
+  padding-bottom: 5px;
+}
+
+.vintage-company-address {
+  font-size: 13px;
+  color: #6d4c41;
+}
+
+.vintage-company-address p {
+  margin: 4px 0;
+}
+
+.vintage-invoice-meta {
+  flex: 1;
+  text-align: right;
+}
+
+.vintage-invoice-header {
+  margin-bottom: 15px;
+}
+
+.vintage-document-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+  color: #7b1fa2;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(45deg, #e1bee7, #f3e5f5);
+  padding: 15px 25px;
+  border: 2px solid #7b1fa2;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.vintage-meta-details {
+  background: #f3e5f5;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #ce93d8;
+}
+
+.vintage-meta-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed #ba68c8;
+}
+
+.vintage-meta-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.vintage-meta-item label {
+  font-weight: bold;
+  color: #7b1fa2;
+  min-width: 100px;
+  text-align: left;
+}
+
+.vintage-meta-item span {
+  font-weight: bold;
+  color: #5d4037;
+}
+
+/* Client Section */
+.vintage-client-section {
+  margin-bottom: 25px;
+}
+
+.vintage-client-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.vintage-client-card, .vintage-summary-card {
+  background: #f3e5f5;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ce93d8;
+  border-left: 5px solid #7b1fa2;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.vintage-card-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 0 15px 0;
+  color: #7b1fa2;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #ba68c8;
+  padding-bottom: 5px;
+}
+
+.vintage-client-name {
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0 0 8px 0;
+  color: #5d4037;
+}
+
+.vintage-client-address {
+  margin: 0 0 8px 0;
+  color: #6d4c41;
+  line-height: 1.4;
+}
+
+.vintage-client-contact, .vintage-client-gst {
+  margin: 4px 0;
+  font-size: 13px;
+  color: #6d4c41;
+}
+
+.vintage-summary-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.vintage-summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px dashed #ba68c8;
+}
+
+.vintage-summary-item:last-child {
+  border-bottom: none;
+}
+
+.vintage-status {
+  background: #ff9800;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Table Section */
+.vintage-table-section {
+  margin-bottom: 25px;
+}
+
+.vintage-table-container {
+  overflow-x: auto;
+  border: 2px solid #7b1fa2;
+  border-radius: 8px;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.vintage-items-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  background: white;
+  min-width: 700px;
+}
+
+.vintage-table-head {
+  background: linear-gradient(180deg, #7b1fa2, #8e24aa);
+}
+
+.vintage-th {
+  padding: 15px 10px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 1px solid #6a1b9a;
+}
+
+.vintage-th-sno { width: 50px; }
+.vintage-th-desc { width: 35%; text-align: left; }
+.vintage-th-hsn { width: 100px; }
+.vintage-th-qty { width: 70px; }
+.vintage-th-rate { width: 100px; }
+.vintage-th-amount { width: 120px; }
+
+.vintage-table-row {
+  border-bottom: 1px solid #e1bee7;
+}
+
+.vintage-table-row:hover {
+  background: #f3e5f5;
+}
+
+.vintage-td {
+  padding: 12px 10px;
+  border: 1px solid #e1bee7;
+  text-align: center;
+  vertical-align: top;
+}
+
+.vintage-td-desc {
+  text-align: left;
+}
+
+.vintage-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.vintage-item-name {
+  font-weight: bold;
+  color: #5d4037;
+}
+
+.vintage-item-desc {
+  font-size: 12px;
+  color: #8d6e63;
+  font-style: italic;
+}
+
+.vintage-empty-row .vintage-td {
+  height: 45px;
+  background: #fafafa;
+}
+
+/* Totals Section */
+.vintage-totals-section {
+  margin-bottom: 25px;
+}
+
+.vintage-totals-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 25px;
+}
+
+.vintage-notes-card, .vintage-bank-card {
+  background: #f3e5f5;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ce93d8;
+  margin-bottom: 15px;
+}
+
+.vintage-notes-title, .vintage-bank-title {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0 0 12px 0;
+  color: #7b1fa2;
+  border-bottom: 1px solid #ba68c8;
+  padding-bottom: 5px;
+}
+
+.vintage-notes-content {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #5d4037;
+}
+
+.vintage-bank-info p {
+  margin: 6px 0;
+  font-size: 13px;
+  color: #5d4037;
+}
+
+.vintage-amounts-area {
+  background: #f3e5f5;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ce93d8;
+}
+
+.vintage-amounts-table {
+  margin-bottom: 15px;
+}
+
+.vintage-amount-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px dashed #ba68c8;
+}
+
+.vintage-amount-row:last-child {
+  border-bottom: none;
+}
+
+.vintage-discount {
+  color: #e53935;
+}
+
+.vintage-grand-total {
+  background: #7b1fa2;
+  color: white;
+  margin: 0 -20px;
+  padding: 15px 20px;
+  border-radius: 0 0 8px 8px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.vintage-amount-words {
+  background: white;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #ce93d8;
+}
+
+.vintage-amount-words p {
+  margin: 5px 0;
+  font-size: 13px;
+  color: #5d4037;
+}
+
+/* Footer */
+.vintage-footer {
+  border-top: 3px double #7b1fa2;
+  padding-top: 25px;
+  margin-top: 25px;
+}
+
+.vintage-footer-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  align-items: end;
+}
+
+.vintage-signature-box {
+  text-align: center;
+}
+
+.vintage-signature-line {
+  width: 200px;
+  height: 1px;
+  background: #7b1fa2;
+  margin: 0 auto 8px auto;
+  border-top: 2px dashed #7b1fa2;
+}
+
+.vintage-signature-label {
+  margin: 0;
+  font-size: 13px;
+  font-weight: bold;
+  color: #7b1fa2;
+}
+
+.vintage-company-stamp {
+  text-align: center;
+}
+
+.vintage-stamp {
+  display: inline-block;
+  padding: 20px 15px;
+  border: 3px solid #7b1fa2;
+  border-radius: 50%;
+  background: #f3e5f5;
+  transform: rotate(-10deg);
+}
+
+.vintage-stamp span {
+  display: block;
+  font-weight: bold;
+  color: #7b1fa2;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.vintage-thankyou-section {
+  text-align: right;
+}
+
+.vintage-thankyou {
+  font-size: 16px;
+  font-weight: bold;
+  color: #7b1fa2;
+  margin: 0 0 8px 0;
+}
+
+.vintage-footer-notes {
+  font-size: 11px;
+  color: #8d6e63;
+  margin: 0;
+  font-style: italic;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .vintage-invoice {
+    padding: 20px;
+    margin: 10px;
+  }
+  
+  .vintage-header {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .vintage-company-info {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .vintage-invoice-meta {
+    text-align: center;
+  }
+  
+  .vintage-client-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .vintage-totals-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .vintage-footer-content {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    text-align: center;
+  }
+  
+  .vintage-thankyou-section {
+    text-align: center;
+  }
+  
+  .vintage-items-table {
+    font-size: 11px;
+    min-width: 600px;
+  }
+}
+
+@media print {
+  .vintage-invoice {
+    box-shadow: none;
+    margin: 0;
+    border: 2px solid #7b1fa2;
+  }
+}
+
+/* Vintage paper effect */
+.vintage-invoice::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 10% 10%, rgba(123, 31, 162, 0.05) 1px, transparent 1px),
+    radial-gradient(circle at 90% 90%, rgba(171, 71, 188, 0.05) 1px, transparent 1px);
+  background-size: 100px 100px;
+  pointer-events: none;
+  z-index: -1;
+}

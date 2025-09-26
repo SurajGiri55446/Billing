@@ -1,0 +1,482 @@
+/* Template4Style.css */
+.template4-wrapper {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+}
+
+.template4-boundary-left,
+.template4-boundary-right {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+  z-index: 1;
+}
+
+.template4-boundary-left {
+  left: 0;
+  border-radius: 0 10px 10px 0;
+  box-shadow: 3px 0 15px rgba(102, 126, 234, 0.3);
+}
+
+.template4-boundary-right {
+  right: 0;
+  border-radius: 10px 0 0 10px;
+  box-shadow: -3px 0 15px rgba(118, 75, 162, 0.3);
+}
+
+.template4-container {
+  position: relative;
+  z-index: 2;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 40px;
+  background: white;
+  color: #333;
+  line-height: 1.5;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 2px solid #e1e5e9;
+}
+
+/* Header */
+.template4-header {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 3px double #e2e8f0;
+}
+
+@media (min-width: 768px) {
+  .template4-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.template4-company-info {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.template4-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 2px solid #e1e5e9;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.template4-logo-placeholder {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.template4-company-details {
+  flex: 1;
+}
+
+.template4-company-name {
+  color: #2d3748;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  border-left: 4px solid #667eea;
+  padding-left: 12px;
+}
+
+.template4-company-address {
+  color: #718096;
+  margin: 0 0 4px 0;
+}
+
+.template4-company-phone {
+  color: #718096;
+  margin: 0;
+}
+
+.template4-invoice-info {
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .template4-invoice-info {
+    text-align: right;
+  }
+}
+
+.template4-invoice-title {
+  color: #e53e3e;
+  font-size: 28px;
+  font-weight: 800;
+  margin: 0 0 16px 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.template4-invoice-details {
+  background: #f7fafc;
+  padding: 16px;
+  border-radius: 8px;
+  border-left: 4px solid #4299e1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.template4-detail-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.template4-detail-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Separator */
+.template4-separator {
+  display: flex;
+  align-items: center;
+  margin: 32px 0;
+}
+
+.template4-separator-line {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #667eea, transparent);
+}
+
+.template4-separator-icon {
+  margin: 0 15px;
+  color: #667eea;
+  font-size: 20px;
+}
+
+/* Billing Section */
+.template4-billing-section {
+  margin-bottom: 32px;
+}
+
+.template4-billing-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .template4-billing-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.template4-address-card {
+  background: #f7fafc;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.template4-card-border {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+}
+
+.template4-section-title {
+  color: #2d3748;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 8px;
+}
+
+.template4-address-details {
+  color: #4a5568;
+}
+
+/* Items Table */
+.template4-items-section {
+  margin-bottom: 24px;
+}
+
+.template4-section-header {
+  margin-bottom: 16px;
+}
+
+.template4-section-border {
+  height: 2px;
+  background: linear-gradient(90deg, #667eea, #764ba2, #667eea);
+  border-radius: 2px;
+  margin-top: 4px;
+}
+
+.template4-table-container {
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.template4-items-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  min-width: 600px;
+}
+
+.template4-table-header {
+  background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+  color: white;
+  padding: 16px 12px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.template4-table-row {
+  border-bottom: 1px solid #e2e8f0;
+  transition: background-color 0.2s;
+}
+
+.template4-table-row:hover {
+  background-color: #f7fafc;
+}
+
+.template4-table-row:last-child {
+  border-bottom: none;
+}
+
+.template4-item-desc {
+  padding: 16px 12px;
+}
+
+.template4-item-name {
+  font-weight: 500;
+  color: #2d3748;
+}
+
+.template4-item-detail {
+  font-size: 14px;
+  color: #718096;
+  margin-top: 4px;
+}
+
+.template4-item-qty,
+.template4-item-rate,
+.template4-item-amount {
+  padding: 16px 12px;
+  color: #4a5568;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-end {
+  text-align: right;
+}
+
+/* Totals */
+.template4-totals-section {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 32px;
+}
+
+.template4-totals-card {
+  background: #f7fafc;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  min-width: 300px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.template4-total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.template4-total-row:last-child {
+  border-bottom: none;
+}
+
+.template4-grand-total {
+  font-size: 18px;
+  font-weight: 700;
+  color: #2d3748;
+  background: linear-gradient(90deg, transparent, #fed7d7, transparent);
+  margin: 0 -20px;
+  padding: 12px 20px;
+}
+
+/* Additional Sections */
+.template4-additional-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.template4-info-card {
+  background: #f7fafc;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.template4-info-content {
+  color: #4a5568;
+}
+
+.template4-info-content p {
+  margin: 8px 0;
+}
+
+.template4-info-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Footer */
+.template4-footer {
+  text-align: center;
+  padding: 24px 0;
+  margin-top: 32px;
+  position: relative;
+  color: #718096;
+  font-style: italic;
+}
+
+.template4-footer-border {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #667eea, transparent);
+}
+
+.template4-footer-signature {
+  margin-top: 40px;
+}
+
+.template4-signature-line {
+  width: 200px;
+  height: 1px;
+  background: #718096;
+  margin: 0 auto 8px auto;
+}
+
+/* Mobile Responsive */
+@media (max-width: 767px) {
+  .template4-wrapper {
+    padding: 0 10px;
+  }
+  
+  .template4-boundary-left,
+  .template4-boundary-right {
+    width: 10px;
+  }
+  
+  .template4-container {
+    padding: 20px;
+    margin: 20px auto;
+  }
+  
+  .template4-company-info {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .template4-logo,
+  .template4-logo-placeholder {
+    align-self: center;
+  }
+  
+  .template4-company-name {
+    border-left: none;
+    border-top: 4px solid #667eea;
+    padding-left: 0;
+    padding-top: 8px;
+    text-align: center;
+  }
+  
+  .template4-invoice-title {
+    font-size: 24px;
+  }
+  
+  .template4-totals-section {
+    justify-content: stretch;
+  }
+  
+  .template4-totals-card {
+    min-width: auto;
+    width: 100%;
+  }
+  
+  .template4-items-table {
+    font-size: 14px;
+  }
+  
+  .template4-table-header,
+  .template4-item-desc,
+  .template4-item-qty,
+  .template4-item-rate,
+  .template4-item-amount {
+    padding: 12px 8px;
+  }
+  
+  .template4-grand-total {
+    margin: 0 -20px;
+    padding: 12px 20px;
+  }
+}
+
+@media print {
+  .template4-boundary-left,
+  .template4-boundary-right {
+    display: none;
+  }
+  
+  .template4-container {
+    box-shadow: none;
+    border: 1px solid #ccc;
+    margin: 0;
+    padding: 20px;
+  }
+}
