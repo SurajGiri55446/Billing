@@ -1,5 +1,5 @@
 // src/App.jsx
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom"; // ✅ No need to import BrowserRouter here
 import { Toaster } from "react-hot-toast";
 
 import Menubar from "./components/Menubar";
@@ -17,55 +17,53 @@ const App = () => {
   return (
     <AppContextProvider>
       <UserSyncHandler />
-      <BrowserRouter>
-        <Menubar />
-        <Toaster position="top-center" toastOptions={{ duration: 3000 }} />
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
+      <Menubar />
+      <Toaster position="top-center" toastOptions={{ duration: 3000 }} />
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
 
-          <Route
-            path="/DashBox"
-            element={
-              <>
-                <SignedIn>
-                  <DashBox />
-                </SignedIn>
-                <SignedOut>
-                  <RedirectToSignIn />
-                </SignedOut>
-              </>
-            }
-          />
+        <Route
+          path="/DashBox"
+          element={
+            <>
+              <SignedIn>
+                <DashBox />
+              </SignedIn>
+              <SignedOut>
+                <RedirectToSignIn />
+              </SignedOut>
+            </>
+          }
+        />
 
-          <Route
-            path="/generate"
-            element={
-              <>
-                <SignedIn>
-                  <MainPage />
-                </SignedIn>
-                <SignedOut>
-                  <RedirectToSignIn />
-                </SignedOut>
-              </>
-            }
-          />
+        <Route
+          path="/generate"
+          element={
+            <>
+              <SignedIn>
+                <MainPage />
+              </SignedIn>
+              <SignedOut>
+                <RedirectToSignIn />
+              </SignedOut>
+            </>
+          }
+        />
 
-          <Route
-            path="/PreviewPage"
-            element={
-              <>
-                <SignedIn>
-                  <PreviewPage />
-                </SignedIn>
-                <SignedOut>
-                  <RedirectToSignIn />
-                </SignedOut>
-              </>
-            }
-          />
-        </Routes>
-      </BrowserRouter>
+        <Route
+          path="/PreviewPage"
+          element={
+            <>
+              <SignedIn>
+                <PreviewPage />
+              </SignedIn>
+              <SignedOut>
+                <RedirectToSignIn />
+              </SignedOut>
+            </>
+          }
+        />
+      </Routes>
     </AppContextProvider>
   );
 };
