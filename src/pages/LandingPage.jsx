@@ -57,10 +57,13 @@ const LandingPage = () => {
     };
   }, []);
 
+   
+
   const handleActionButton = (e) => {
     if (e) {
       e.preventDefault();
       e.stopPropagation();
+       navigate("/generate");
     }
     console.log("Create Invoice Button Clicked - Navigating to /generate");
     
